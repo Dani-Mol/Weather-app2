@@ -1,0 +1,216 @@
+/* Importa la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-weight: 600; 
+}
+
+/* Estilos del cuerpo de la página */
+body {
+    background: url('assets/bg.jpg');
+    width: 100%;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Filtro de fondo para un efecto de desenfoque */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background: rgb(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px); 
+}
+
+/* Utilidades */
+.regular-txt {
+    font-weight: 400;
+}
+/* Fin de utilidades */
+
+
+/* Contenedor principal de la aplicación */
+.main-container {
+    width: 368px; 
+    height: 496px;
+    z-index: 1;
+    background: linear-gradient(
+        to top, rgb(0, 0, 0, 0.15),
+        rgb(255, 255, 255, 0.15));
+    border-radius: 12px;
+    backdrop-filter: blur(100px);
+    padding: 20px;
+}
+
+/* container de entrada */
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+
+/* Estilos para el campo de entrada de la ciudad */
+.city-input {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background: rgb(0, 0, 0, 0.15);
+    outline: none;
+    font-weight: 500;
+    transition: 0.25s border;
+    padding-right: 45px;
+}
+
+/* Efecto al enfocar el campo de entrada */
+.city-input:focus {
+    border: 3px solid rgb(0, 0, 0, 0.15);
+}
+
+/* Estilos para el placeholder del campo de entrada */
+.city-input::placeholder {
+    color: rgb(255, 255, 255, 0.75);
+}
+
+/* Estilos para el botón de búsqueda */
+.search-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.25s;
+}
+
+/* Efecto al pasar el ratón sobre el botón de búsqueda */
+.search-btn:hover {
+    opacity: 1;
+}
+/* Fin de container de entrada */
+
+/* Seccion de informacion del clima */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+/* Contenedor para la ubicación y la fecha */
+.location-date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Estilos para la ubicación */
+.location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+/* Contenedor del resumen del clima */
+.weather-summary-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para la imagen del resumen del clima */
+.weather-summary-img {
+    width: 120px;
+    height: 120px;
+}
+
+/* Información del resumen del clima */
+.weather-summary-info {
+    text-align: end;
+}
+
+
+/* Contenedor de las condiciones climáticas */
+.weather-conditions-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para cada item de condición climática */
+.condition-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+/* Estilos para el icono de condición */
+.condition-item span {
+    font-size: 30px;
+}
+/* Contenedor para los pronósticos climáticos */
+.forecast-items-container {
+    display: flex;
+    gap: 15px; 
+    overflow-x: scroll;
+    padding-bottom: 12px;
+}
+
+/* Estilos para cada item de pronóstico */
+.forecast-item {
+    min-width: 70px;
+    background: rgb(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 12px;
+    transition: 0.3s background;
+}
+
+/* Efecto al pasar el ratón sobre el item de pronóstico */
+.forecast-item:hover {
+    background: rgb(255, 255, 255, 0.15);
+}
+
+/* Estilos para la imagen del pronóstico */
+.forecast-item-img {
+    width: 35px;
+    height: 35px;
+}
+/* Fin de seccion de informacion de clima  */
+
+/* Seccion de mensaje */
+
+.section-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 20%; 
+    padding: 20px;   
+    max-width: 100%; 
+}
+
+
+/* Estilos para las imágenes en la sección de mensaje */
+.section-message img {
+    max-width: 100%;  
+    height: auto;     
+    max-height: 150px;
+    object-fit: contain;  
+    border-radius: 8px;   
+}
+
+
+/* Fin de sección de mensaje  */
