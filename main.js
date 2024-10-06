@@ -20,7 +20,7 @@ const currentDateTxt = document.querySelector('.current-date-txt'); // Texto par
 const forecastItemsContainer = document.querySelector('.forecast-items-container');
 
 // Clave de la API de OpenWeatherMap
-const apiKey = '703237c4dc4a1513e36572e2066267dc'; 
+const apiKey = 'llave de api a ingresar por usuario'; 
 
 // Variable para almacenar los datos del CSV
 let citiesData = [];
